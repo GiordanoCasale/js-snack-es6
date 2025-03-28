@@ -46,6 +46,7 @@ console.log(piùLeggera)
 //fine esercizio 1
 
 //esercizio 2
+//creiamo l'array delle squadre di calcio
 const squad = [
     {
         nome: "Roma",
@@ -74,5 +75,31 @@ const squad = [
     },
 ]
 
-console.log(squad)
+console.log(squad) //lo stampiamo sulla console per constatare se è visualizato
+
+//vado a generare numeri random per i punti e i falli con una funziona
+function randomStats(min, max){
+
+return Math.floor(Math.random() * (max-min +1)) +min;
+}
+
+//andiamo ad usare un for of per inserire i valori randomici
+
+for(let i in squad ){
+
+    squad[i].punti= randomStats(1,70);
+    squad[i].falli= randomStats(1,50);
+}
+//andiamo a creare un nuovo array in cui inserire solo i nomi e i falli delle squadre
+const newarray= [];
+
+for(let i in squad){
+    newarray.push({nome:squad[i].nome, falli:squad[i].falli});
+}
+
+console.log(newarray)
+
+
+
+
 
