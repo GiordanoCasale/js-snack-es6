@@ -29,13 +29,13 @@ const Bike = [
 
 
 
-//creimo una funziona per far apparire sulla console la bici meno pesante
 
+//andiamo ad inizializzare delle variabili
 let minPeso = Bike[0].peso;
 let piùLeggera = Bike[0];
-
+//ora andiamo a ciclare l'array per andare a vedere quale bici pesa di meno
 for(let i=1; i<Bike.length; i++){
-
+//con l'if andiamo ad impostare la condizione con cui scegliamo la bici meno pesante
     if(Bike[i].peso<minPeso){
         minPeso = Bike[i].peso;
         piùLeggera = Bike[i];
@@ -43,3 +43,6 @@ for(let i=1; i<Bike.length; i++){
 }
 
 console.log(piùLeggera)
+//fine esercizio 1
+
+//esercizio 2
