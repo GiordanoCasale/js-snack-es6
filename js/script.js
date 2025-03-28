@@ -27,4 +27,19 @@ const Bike = [
     },
 ]
 
-console.log(bike)
+
+
+//creimo una funziona per far apparire sulla console la bici meno pesante
+
+let minPeso = Bike[0].peso;
+let piùLeggera = Bike[0];
+
+for(let i=1; i<Bike.length; i++){
+
+    if(Bike[i].peso<minPeso){
+        minPeso = Bike[i].peso;
+        piùLeggera = Bike[i];
+    }
+}
+
+console.log(piùLeggera)
